@@ -21,7 +21,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
-
+![banana](https://user-images.githubusercontent.com/39303516/108419424-7c8b4300-7200-11eb-84b8-ec25f4f32850.gif)
 ## Requirements
 - Pytorch
 - Pytorn 3.6

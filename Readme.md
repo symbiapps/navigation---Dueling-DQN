@@ -1,4 +1,5 @@
-# Navigation --- Dueling-DQN Solving Unity's p1_navigation Environment with Dueling DQN
+# Navigation --- Dueling-DQN 
+## Solving Unity's navigation Environment with Dueling DQN
 
 "The Dueling neural network architecture was introduced in 2015 in a paper called “Dueling Network Architectures for Deep Reinforcement Learning” by Ziyu Wang when he was a PhD student at the University of Oxford. This was arguably the first paper to introduce a custom deep neural network architecture designed specifically for value-based deep reinforcement learning methods. Dueling DQN is an architecture that separates the representation of state values and state-dependent action advantages via two separate streams."
 

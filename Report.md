@@ -61,8 +61,9 @@ class QNetwork(nn.Module):
         super(QNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
         self.fc1 = nn.Linear(state_size, fc1_units)
-   #### self.advantage = nn.Linear(fc1_units, 4)
-   #### self.value = nn.Linear(fc1_units, 4)
+      1. self.advantage = nn.Linear(fc1_units, 4)
+      2. elf.value = nn.Linear(fc1_units, 4)
+        
         self.activation = nn.Tanh()
 
     def forward(self, state):
@@ -70,9 +71,9 @@ class QNetwork(nn.Module):
         output1 = self.fc1(state)
         output1 = self.activation(output1)
         
-   ####  output_advantage = self.advantage(output1)
-   #### output_value = self.value(output1)
-   #### output_final =  output_value  + (output_advantage - output_advantage.mean())
+   3. output_advantage = self.advantage(output1)
+   4. output_value = self.value(output1)
+   5. output_final =  output_value  + (output_advantage - output_advantage.mean())
         
         return output_final
         

@@ -11,10 +11,11 @@ Here, the V(s) stands for the Value of state s and A is the Advantage of doing a
 
 
 
+
 class QNetwork(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size, seed, fc1_units=64):
+    def __init__(self, state_size, action_size, seed, fc1_units=64, fc2_units=64):
         """Initialize parameters and build model.
         Params
         ======
@@ -22,25 +23,20 @@ class QNetwork(nn.Module):
             action_size (int): Dimension of each action
             seed (int): Random seed
             fc1_units (int): Number of nodes in first hidden layer
-           
+            fc2_units (int): Number of nodes in second hidden layer
         """
         super(QNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
         self.fc1 = nn.Linear(state_size, fc1_units)
-        self.advantage = nn.Linear(fc1_units, 4)
-        self.value = nn.Linear(fc1_units, 4)
-        self.activation = nn.Tanh()
+        self.fc2 = nn.Linear(fc1_units, fc2_units)
+        self.fc3 = nn.Linear(fc2_units, action_size)
 
     def forward(self, state):
         """Build a network that maps state -> action values."""
-        output1 = self.fc1(state)
-        output1 = self.activation(output1)
-        
-        output_advantage = self.advantage(output1)
-        output_value = self.value(output1)
-        output_final =  output_value  + (output_advantage - output_advantage.mean())
-        
-        return output_final
+        x = F.relu(self.fc1(state))
+        x = F.relu(self.fc2(x))
+        return self.fc3(x)
+
 
 
 Dueling DQN is very simple to apply the only changes in my example are bolded in the lower model.

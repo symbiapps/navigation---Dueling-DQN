@@ -5,7 +5,9 @@ he difference in Dueling DQN is in the structure of the model. The model is crea
 
 
 Here, the V(s) stands for the Value of state s and A is the Advantage of doing action a while in state s. The Value of a state is independent of action. It means how good is it to be in a particular state. But what is an Advantage? How is it different from Q-value? Let’s explain it with an example. The agent might be in a state where each of the actions would give the same Q-value. So there is no good action in this state. What would happen if we divide the Q-value to Value of a state and the Advantage that each action has. If every action has the same result, then the Advantage of each action will have the same value. Now, if we subtract the mean of all the Advantages from each advantage, we get zero (or close to zero) and Q-value would actually be the Value that the state has.
-Image for post
+
+![1_sHh7CknXpNikJG6LWpIpGg](https://user-images.githubusercontent.com/39303516/108522382-c4f73f00-729a-11eb-88b2-a27a9f16b52d.png)
+
 So overtime the Q-value would not overshoot. The states that are independent of action would not have a high Q-value to train on.
 
 

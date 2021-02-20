@@ -78,3 +78,4 @@ class QNetwork(nn.Module):
         return output_final
         
     
+![reward](https://user-images.githubusercontent.com/39303516/108601850-c98c2800-736c-11eb-81a8-b2cb8f2db1f7.png)

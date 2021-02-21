@@ -29,3 +29,4 @@ The task is episodic, and in order to solve the environment, your agent must get
 - Unityagent
 -  The instructions on setting up the project environment can be found here. [Udacity](https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation#getting-started)
 - The instructions on setting up a Python Environment can be found here. [Udacity](https://classroom.udacity.com/nanodegrees/nd893/parts/6b0c03a7-6667-4fcf-a9ed-dd41a2f76485/modules/e7499d4f-24f9-42ec-9864-23adcfa4e241/lessons/69bd42c6-b70e-4866-9764-9bfa8c03cdea/concepts/319dc918-bd2c-4d3b-80a5-063bb5f1905a)
+- I would recommend downloading [Anaconda](https://docs.anaconda.com/anaconda/install/) and running the code in Jupter notebooks.

@@ -90,4 +90,4 @@ The hyperparameter values used to train the agent as follows
 - LR = 5e-4               # learning rate 
 - UPDATE_EVERY = 4        # how often to update the network
 
-
+Work at solving similar enviroments to the one in this project can be further researched using algorithm such as the  Raindow  which is a combining of improvement techniques such as DDQN,A3C,Noisy DQN among others seem to be quite  promising. Infomation on the algorithm can be found here [Rainbow](https://arxiv.org/abs/1710.02298) .
